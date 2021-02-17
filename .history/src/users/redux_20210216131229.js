@@ -1,0 +1,3 @@
+{
+  type: 'COUNTER_ADD'
+}
