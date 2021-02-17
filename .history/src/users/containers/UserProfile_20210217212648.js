@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { useParams } from 'react-router-dom';
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import { Container, UserDiv, UserP, DivIcon } from './../styled/styled';
@@ -6,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 class Posts extends Component {
-
+  const { userId } = useParams();
   render() {
     const { users, isLoading } = this.props;
 

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { useParams } from 'react-router-dom';
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import { Container, UserDiv, UserP, DivIcon } from './../styled/styled';
