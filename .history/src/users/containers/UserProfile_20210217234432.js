@@ -1,23 +1,20 @@
 import React, { useEffect, useState} from 'react';
 import { connect } from "react-redux";
 
-import { useParams } from 'react-router-dom';
-
-const UserProfile = ({users}) => {
+import { Link, useParams } from 'react-router-dom';
+const UserProfile = () => {
   const { id } = useParams();
   const [user, setUser] = useState([]);
   useEffect(() => {
      setUser(...users.filter((user) => user.login.uuid === id));
+
   }, [users, id]);
   console.log(user);
   return (
-    <>
     <div>
-        użytkownik { id }
-        <p>{user.email}</p>
+       hahaha {id}
 
     </div>
-    </>
   )
 }
 const mapStateToProps = state => ({

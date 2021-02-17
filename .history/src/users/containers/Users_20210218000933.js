@@ -12,7 +12,7 @@ class Posts extends Component {
 
     const usersData = users.map(user => <UserDiv key={user.login.uuid}>
       <UserP  >
-        <Link className="link" to={`/user/${user.login.uuid}`}>{user.name.first} {user.name.last}</Link>
+        <Link className="link" to={`users/${user.login.uuid}`}>{user.name.first} {user.name.last}</Link>
       </UserP>
       <DivIcon>
         <FontAwesomeIcon icon={faTrash}/>

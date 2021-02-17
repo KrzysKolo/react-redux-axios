@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 const UserProfile = ({users}) => {
   const { id } = useParams();
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState();
   useEffect(() => {
      setUser(...users.filter((user) => user.login.uuid === id));
   }, [users, id]);

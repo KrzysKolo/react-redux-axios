@@ -1,11 +1,11 @@
 import React, { useEffect, useState} from 'react';
 import { connect } from "react-redux";
 
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const UserProfile = ({users}) => {
   const { id } = useParams();
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState();
   useEffect(() => {
      setUser(...users.filter((user) => user.login.uuid === id));
   }, [users, id]);
@@ -14,7 +14,6 @@ const UserProfile = ({users}) => {
     <>
     <div>
         użytkownik { id }
-        <p>{user.email}</p>
 
     </div>
     </>
