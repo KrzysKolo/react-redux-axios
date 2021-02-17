@@ -4,7 +4,7 @@ const ContactPage = () => {
   return (
     <Container>
       <TitlePage>
-        Contact Page
+        Contact Page dnjhdwjhd
       </TitlePage>
     </Container>
   )
