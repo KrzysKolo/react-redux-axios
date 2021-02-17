@@ -11,8 +11,8 @@ class Posts extends Component {
     const { users, isLoading } = this.props;
 
     const usersData = users.map(user => <UserDiv>
-      <UserP key={user.login.uuid} >
-        <Link className="link" to={`/${user.login.uuid}`} user={user}>{user.name.first} {user.name.last}</Link>
+      <UserP key={user.login.uuid} user={user}>
+        <Link className="link" to={`/${user.id}`}>{user.name.first} {user.name.last}</Link>
       </UserP>
       <DivIcon>
         <FontAwesomeIcon icon={faTrash}/>
