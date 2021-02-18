@@ -2,7 +2,7 @@ import React from 'react';
 import Users from './../users/containers/Users';
 import { connect } from "react-redux";
 import { Container, TitlePage, WrapperPage, WrapperButton, ButtonApp, Buttons, WrapperUsers  } from './styled/styled';
-import { fetchUsers, removeUsers } from './../users/redux';
+import { fetchUsers, resetUsers } from './../users/redux';
 
 const Home = ({users, fetchUsers, removeUsers }) => {
 

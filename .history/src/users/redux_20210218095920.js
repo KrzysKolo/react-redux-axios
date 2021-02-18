@@ -17,12 +17,6 @@ export const fetchFailed = () => ({ type: FETCH_USERS_FAILED });
 export const fetchSucceded = data => ({ type: FETCH_USERS_SUCCEDED, payload: data });
 export const resetUsers = () => ({ type: RESET_USERS});
 
-export const removeUsers = ()=> {
-  return function(dispatch){
-    dispatch(resetUsers());
-  }
-}
-
 export const fetchUsers = () => {
   return function(dispatch) {
     dispatch(fetchRequested());
