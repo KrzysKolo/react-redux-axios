@@ -1,12 +1,13 @@
 import React from 'react';
 import UserProfile from './../users/containers/UserProfile';
 import { Link } from 'react-router-dom';
-import { Container, ButtonApp } from './styled/styled';
+import { Container } from './styled/styled';
 const UserPage = () => {
   return (
     <Container>
+      <h2>Strona użytkownika</h2>
       <UserProfile />
-      <ButtonApp color={'#3f51b5'}><Link to="/users" style={{textDecoration: 'none', color: 'white'}}>Powrót</Link></ButtonApp>
+      <Link to="/users">Powrót</Link>
     </Container>
   )
 }

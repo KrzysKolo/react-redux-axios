@@ -13,7 +13,7 @@ const UserProfile = ({users}) => {
   useEffect(() => {
      setUser(...users.filter((user) => user.login.uuid === id));
   }, [users, id]);
-
+  const {city, country} = user.location;
   console.log(user);
   return (
     <>
@@ -25,8 +25,8 @@ const UserProfile = ({users}) => {
     <WrapperInfoDiv>
 
     <InfoH2>Location:</InfoH2>
-      <InfoH3>City: {user.location.city}</InfoH3>
-      <InfoH3>Country: {user.location.country}</InfoH3>
+      <InfoH3>City: {city}</InfoH3>
+      <InfoH3>Country: {country}</InfoH3>
     </WrapperInfoDiv> */}
     <WrapperInfoDiv>
     <InfoH2>Contact:</InfoH2>

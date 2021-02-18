@@ -6,7 +6,7 @@ const UserPage = () => {
   return (
     <Container>
       <UserProfile />
-      <ButtonApp color={'#3f51b5'}><Link to="/users" style={{textDecoration: 'none', color: 'white'}}>Powrót</Link></ButtonApp>
+      <ButtonApp color={'#e2e2e2'}><Link to="/users" style={{textDecoration: 'none', color: '#3f499e'}}>Powrót</Link></ButtonApp>
     </Container>
   )
 }

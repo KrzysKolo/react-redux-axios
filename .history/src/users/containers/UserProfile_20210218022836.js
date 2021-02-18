@@ -11,23 +11,24 @@ const UserProfile = ({users}) => {
   console.log(users);
   console.log(id);
   useEffect(() => {
-     setUser(...users.filter((user) => user.login.uuid === id));
+     setUser(users.filter((user) => user.login.uuid === id));
   }, [users, id]);
-
   console.log(user);
+  const { large } = user.picture;
+  const [ city, country ] = user.location;
   return (
     <>
-  {/*  <WrapperInfoSection>
-         <UserImg src={user.picture.large} alt={user.name.first} />
+    <WrapperInfoSection>
+         <UserImg src={large} alt={user.name.first} />
         <NameUser>{user.name.first} {user.name.last}</NameUser>
     </WrapperInfoSection>
 
     <WrapperInfoDiv>
 
     <InfoH2>Location:</InfoH2>
-      <InfoH3>City: {user.location.city}</InfoH3>
-      <InfoH3>Country: {user.location.country}</InfoH3>
-    </WrapperInfoDiv> */}
+      <InfoH3>City: {city}</InfoH3>
+      <InfoH3>Country: {country}</InfoH3>
+    </WrapperInfoDiv>
     <WrapperInfoDiv>
     <InfoH2>Contact:</InfoH2>
       <InfoH3> <FontAwesomeIcon icon={faEnvelope} style={{color: '#3f51b5', fontSize: '1.1rem'}}/> {user.email}</InfoH3>

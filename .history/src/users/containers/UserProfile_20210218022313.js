@@ -13,17 +13,14 @@ const UserProfile = ({users}) => {
   useEffect(() => {
      setUser(...users.filter((user) => user.login.uuid === id));
   }, [users, id]);
-
   console.log(user);
   return (
     <>
-  {/*  <WrapperInfoSection>
+ {/*   <WrapperInfoSection>
          <UserImg src={user.picture.large} alt={user.name.first} />
         <NameUser>{user.name.first} {user.name.last}</NameUser>
     </WrapperInfoSection>
-
     <WrapperInfoDiv>
-
     <InfoH2>Location:</InfoH2>
       <InfoH3>City: {user.location.city}</InfoH3>
       <InfoH3>Country: {user.location.country}</InfoH3>
