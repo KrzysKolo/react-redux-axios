@@ -17,7 +17,7 @@ export const fetchRequested = () => ({ type: FETCH_USERS_REQUESTED });
 export const fetchFailed = () => ({ type: FETCH_USERS_FAILED });
 export const fetchSucceded = data => ({ type: FETCH_USERS_SUCCEDED, payload: data });
 export const resetUsers = () => ({ type: RESET_USERS});
-export const addUserSucceded = (data) => ({ type: ADD_USER, payload: data });
+export const addUser = () => ({ type: ADD_USER});
 
 export const removeUsers = ()=> {
   return function(dispatch){
@@ -40,7 +40,7 @@ export const fetchUsers = () => {
     })
     };
 }
-export const addUser = () => {
+export const fetchUser = () => {
   return function(dispatch) {
     dispatch(fetchRequested());
     axios
@@ -48,7 +48,7 @@ export const addUser = () => {
     .then(response => {
       const users = response.data.results
       console.log(users)
-      dispatch(addUserSucceded(users))
+      dispatch(fetchSucceded(users))
     })
     .catch(error => {
       dispatch(fetchFailed(error.message))

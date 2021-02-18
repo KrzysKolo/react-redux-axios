@@ -48,7 +48,7 @@ export const addUser = () => {
     .then(response => {
       const users = response.data.results
       console.log(users)
-      dispatch(addUserSucceded(users))
+      dispatch(fetchSucceded(users))
     })
     .catch(error => {
       dispatch(fetchFailed(error.message))

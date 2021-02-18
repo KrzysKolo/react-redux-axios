@@ -12,7 +12,6 @@ const Home = ({users, fetchUsers, removeUsers, addUser }) => {
     };
 
   const resetUsers = () => removeUsers();
-  const addOneUser = () => addUser();
 
   return (
     <Container>
@@ -23,7 +22,7 @@ const Home = ({users, fetchUsers, removeUsers, addUser }) => {
             {users.length > 0 ? (
               <Buttons>
                 <ButtonApp color={'rgb(195, 1, 4)'} onClick={resetUsers}>Reset Users</ButtonApp>
-                <ButtonApp color={'rgb(76, 175, 80)'} onClick={addOneUser}>Add User</ButtonApp>
+                <ButtonApp color={'rgb(76, 175, 80)'}>Add User</ButtonApp>
               </Buttons>) : null}
         </WrapperButton>
         <WrapperUsers>

@@ -17,7 +17,6 @@ export const fetchRequested = () => ({ type: FETCH_USERS_REQUESTED });
 export const fetchFailed = () => ({ type: FETCH_USERS_FAILED });
 export const fetchSucceded = data => ({ type: FETCH_USERS_SUCCEDED, payload: data });
 export const resetUsers = () => ({ type: RESET_USERS});
-export const addUserSucceded = (data) => ({ type: ADD_USER, payload: data });
 
 export const removeUsers = ()=> {
   return function(dispatch){
@@ -34,21 +33,6 @@ export const fetchUsers = () => {
       const users = response.data.results
       console.log(users)
       dispatch(fetchSucceded(users))
-    })
-    .catch(error => {
-      dispatch(fetchFailed(error.message))
-    })
-    };
-}
-export const addUser = () => {
-  return function(dispatch) {
-    dispatch(fetchRequested());
-    axios
-    .get("https://randomuser.me/api/?results=1")
-    .then(response => {
-      const users = response.data.results
-      console.log(users)
-      dispatch(addUserSucceded(users))
     })
     .catch(error => {
       dispatch(fetchFailed(error.message))
@@ -84,13 +68,6 @@ switch(action.type) {
       isError: false,
       users: []
     };
-  case ADD_USER:
-    return {
-      ...state,
-      isLoading: false,
-      isError: false,
-      users: state.users.concat(action.payload),
-    }
   default:
     return state;
 }
