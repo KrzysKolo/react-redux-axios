@@ -10,7 +10,6 @@ const UserProfile = ({users}) => {
   const [user, setUser] = useState([]);
   console.log(users);
   console.log(id);
-
   useEffect(() => {
      setUser(...users.filter((user) => user.login.uuid === id));
   }, [users, id]);

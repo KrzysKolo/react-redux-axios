@@ -10,7 +10,6 @@ const UserProfile = ({users}) => {
   const [user, setUser] = useState([]);
   console.log(users);
   console.log(id);
-
   useEffect(() => {
      setUser(...users.filter((user) => user.login.uuid === id));
   }, [users, id]);
@@ -22,13 +21,11 @@ const UserProfile = ({users}) => {
         <img src={user.picture.large} alt={user.name.first} />
         <p>{user.name.first} {user.name.last}</p>
       </section>
-
       <div>
         <h2>Location:</h2>
         <h3>City: {user.location.city}</h3>
         <h3>Country: {user.location.country}</h3>
-      </div>
-      */}
+      </div> */}
       <div>
         <h2>Contact:</h2>
         <h3><FontAwesomeIcon icon={faEnvelope} style={{color: '#3f51b5', fontSize: '1.1rem'}}/> {user.email}</h3>
